@@ -18,9 +18,10 @@
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav id="mainNav" aria-label="Navegación principal">
       <a href="#presentacion">Curso</a>
-      <a href="#ruta">Unidades</a>
+      <a href="#ruta">Unidades y lecturas</a>
       <a href="#actividades">Actividades</a>
-      <a href="#evaluacion">Evaluación</a>
+      <a href="#cuestionario">Cuestionarios</a>
+      <a href="#foros">Foros</a>
       <a href="#recursos">Recursos</a>
     </nav>
   </header>
@@ -61,7 +62,7 @@
         <span class="eyebrow dark">01 · PRESENTACIÓN GENERAL</span>
         <h2>La tecnología cobra sentido cuando <em>transforma el aprendizaje.</em></h2>
         <p>Este curso desarrolla la capacidad de identificar, evaluar y utilizar herramientas didácticas proporcionadas por las tecnologías de la información y la comunicación (TIC), para enriquecer los procesos de enseñanza-aprendizaje y crear recursos educativos digitales abiertos.</p>
-        <p>La metodología combina clases y encuentros con expertos, metodologías activas, trabajo colaborativo y un laboratorio de innovación educativa. El estudiante participa como constructor activo de conocimiento y el docente acompaña como mediador.</p>
+        <p>La metodología combina clases y encuentros con expertos, metodologías activas, trabajo colaborativo y un laboratorio de innovación educativa. El estudiante participa como constructor activo de conocimiento y el docente acompaña como mediador. Cada unidad conserva la secuencia de presentación, contenidos, actividades, foro y cuestionario del diseño instruccional.</p>
       </div>
       <aside class="outcome-card">
         <span class="card-kicker">PROPÓSITO FORMATIVO</span>
@@ -77,7 +78,7 @@
     <section class="section pathway-section" id="ruta">
       <div class="section-heading">
         <div><span class="eyebrow dark">02 · RUTA DE APRENDIZAJE</span><h2>Tres unidades, un proyecto integrador</h2></div>
-        <p>Avanza por los contenidos, desarrolla las actividades y registra tus evidencias. Tu progreso se guarda en este navegador.</p>
+        <p>Lee la presentación académica de cada tema directamente en la página, desarrolla las actividades y registra tus evidencias. Tu progreso se guarda en este navegador.</p>
       </div>
       <div class="progress-panel">
         <div class="progress-copy"><strong>Tu avance en el curso</strong><span id="progressText">0 de 3 unidades completadas</span></div>
@@ -109,7 +110,7 @@
       </div>
 
       <div class="unit-detail" id="unitDetail" aria-live="polite">
-        <div class="detail-placeholder"><span>←</span><div><strong>Selecciona una unidad para comenzar</strong><p>Encontrarás su propósito, contenidos, actividades y orientaciones de trabajo.</p></div></div>
+        <div class="detail-placeholder"><span>←</span><div><strong>Selecciona una unidad para comenzar</strong><p>Encontrarás la presentación académica completa del tema, sus actividades, el acceso directo al foro y el cuestionario correspondiente.</p></div></div>
       </div>
     </section>
 
@@ -200,6 +201,31 @@
         <details><summary>Foro 3 · Comunidades y laboratorios</summary><p>¿Qué estrategias propondrías para innovar una asignatura mediante recursos educativos abiertos y escenarios disruptivos? ¿Qué obstáculos anticipas y cómo los superarías?</p><small>Orientación: integra las lecturas, ejemplos concretos y experiencias profesionales.</small></details>
         <div class="forum-caveat">Este espacio presenta las consignas. Para publicar respuestas visibles a todo el grupo, el docente debe vincular el foro institucional (Moodle, Classroom u otra plataforma). Las respuestas escritas aquí no se transmiten ni se almacenan en un servidor.</div>
       </div>
+
+      <div class="interactive-panel" id="foro-escritura">
+        <h3>Escribe tu participación</h3>
+        <p>Selecciona el foro, escribe tu aporte y las réplicas. Guarda el borrador en este navegador y descarga una copia para entregar en la plataforma indicada por tu docente.</p>
+        <label for="forumSelect">Foro que vas a responder</label>
+        <select id="forumSelect"><option value="0">Foro 1 · Competencias digitales e innovación</option><option value="1">Foro 2 · Recursos educativos abiertos</option><option value="2">Foro 3 · Comunidades y laboratorios</option></select>
+        <label for="forumAuthor">Nombre del estudiante <input id="forumAuthor" autocomplete="name" placeholder="Nombre completo" /></label>
+        <label for="forumResponse">Intervención principal <textarea id="forumResponse" rows="8" placeholder="Escribe aquí tu reflexión fundamentada..."></textarea></label>
+        <p id="forumCount" class="counter" aria-live="polite">0 palabras</p>
+        <div class="forum-form-grid"><label for="forumReply1">Réplica a un compañero <textarea id="forumReply1" rows="5" placeholder="Argumenta tu respuesta..."></textarea></label><label for="forumReply2">Segunda réplica <textarea id="forumReply2" rows="5" placeholder="Argumenta tu respuesta..."></textarea></label></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" id="forumSave">Guardar borrador</button><button type="button" class="btn btn-outline-dark" id="forumExport">Descargar participación</button><button type="button" class="btn btn-outline-dark" id="forumPrint">Imprimir / guardar PDF</button></div>
+        <p id="forumStatus" class="status-line" role="status"></p>
+        <p class="privacy-warning">Las respuestas se guardan únicamente en este navegador. No se publican para otros estudiantes ni se envían al docente. Para foros compartidos, usa Classroom o Moodle.</p>
+      </div>
+    </section>
+
+
+    <section class="section quiz-section" id="cuestionario">
+      <div class="section-heading"><span class="eyebrow">EVALUACIÓN INTERACTIVA</span><h2>Cuestionarios de lectura por unidad</h2><p>Preguntas y claves del diseño instruccional (respuestas destacadas en turquesa). Selecciona una unidad, responde y consulta tu resultado.</p></div>
+      <div class="quiz-header"><div><strong>Evaluación de comprensión</strong><span>Selección múltiple · única respuesta · escala de 0 a 5</span></div><span id="quizAnswered" aria-live="polite">0 respondidas</span></div>
+      <label for="quizUnit" style="display:block;font-weight:700;margin:12px 0">Selecciona la unidad</label>
+      <select id="quizUnit" style="width:100%;padding:12px;border:1px solid #cbd7e4;border-radius:9px;background:white;color:#24364b"><option value="1">Unidad 1 · Conceptualización (15 preguntas)</option><option value="2">Unidad 2 · Plataformas de aprendizaje en línea (14 preguntas)</option><option value="3">Unidad 3 · Colaboración virtual y comunidades de aprendizaje (5 preguntas)</option></select>
+      <p class="quiz-note">Las respuestas se guardan únicamente en este dispositivo. La calificación automática es orientativa y no se envía al docente ni acredita aprobación institucional. La clave está visible en el código público, por lo que no debe usarse para una evaluación certificadora supervisada.</p>
+      <form id="quizForm"><div id="quizQuestions"></div><div class="form-actions"><button type="submit" class="btn btn-primary">Calificar cuestionario</button><button type="button" id="quizReset" class="btn btn-outline-dark">Borrar respuestas de esta unidad</button><button type="button" id="quizExport" class="btn btn-outline-dark">Descargar resultados</button></div></form>
+      <div id="quizResult" class="quiz-result" role="status" tabindex="-1"></div>
     </section>
 
     <section class="closing-cta">
@@ -215,6 +241,7 @@
     <div class="footer-info"><p>Diseño instruccional base: mayo de 2024</p><p>Elaborado por: Luz Marina Chalapud Narváez</p><p class="footer-small">Sitio educativo abierto. Los contenidos se presentan con fines formativos y respetan la organización del documento de referencia.</p></div>
   </footer>
 
+  <script src="quiz-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,34 +1,29 @@
-# Electiva I: Herramientas Didácticas para una Generación Digital
-
-Sitio web estático y adaptable, preparado para publicarse gratuitamente con **GitHub Pages**.
-
-## Contenido
-- `index.html`: estructura y contenidos del curso.
-- `styles.css`: diseño adaptable a computadores, tabletas y celulares.
-- `script.js`: navegación de unidades, avance local y cuaderno de laboratorio descargable.
+# Curso virtual: Electiva I — Herramientas Didácticas para una Generación Digital
 
 ## Publicación en GitHub Pages
-1. Inicia sesión en GitHub y crea un repositorio nuevo, por ejemplo `curso-electiva-herramientas-didacticas`.
-2. Selecciona la opción **Public** para que los estudiantes puedan consultar el curso sin iniciar sesión.
-3. Carga los tres archivos (`index.html`, `styles.css` y `script.js`) en la raíz del repositorio.
-4. Abre **Settings → Pages**.
-5. En **Build and deployment**, selecciona **Deploy from a branch**.
-6. Selecciona la rama `main` y la carpeta `/ (root)`. Guarda los cambios.
-7. Espera la publicación. GitHub mostrará una dirección similar a:
-   `https://TU-USUARIO.github.io/curso-electiva-herramientas-didacticas/`
-8. Comparte esa dirección con los estudiantes.
+Sube **estos cinco archivos** directamente a la raíz de tu repositorio público, con **Agregar archivo → Cargar archivos**, y confirma **Commit changes**:
 
-## Características y límites
-- El sitio es público y no exige cuenta de GitHub a los estudiantes.
-- El avance y el cuaderno se guardan en el almacenamiento local del navegador del estudiante. No se envían al docente ni se sincronizan entre dispositivos.
-- Los foros son consignas de discusión. Para recibir y visualizar aportes de todo el grupo, enlaza un foro institucional (Moodle, Classroom, etc.).
-- Para recibir tareas, gestionar calificaciones, controlar acceso o hacer seguimiento docente, integra un LMS o formularios institucionales.
-- Los enlaces bibliográficos proceden del diseño instruccional base; algunos pueden requerir acceso institucional.
+- `index.html` — presentación del curso, unidades y módulos de interacción.
+- `styles.css` — diseño adaptable.
+- `script.js` — lecturas, navegación, progreso, foro y cuestionarios.
+- `quiz-data.js` — **34 preguntas y claves del diseño instruccional**.
+- `README.md` — instrucciones.
 
-## Personalización
-- Edita los textos de `index.html`.
-- Modifica los colores y estilos en `styles.css`.
-- Cambia títulos, temas y actividades de las unidades en el arreglo `unitData` de `script.js`.
+En **Configuración → Pages**, selecciona **Deploy from a branch**, la rama predeterminada (`main` o `principal`) y **/(root)**. Espera a que aparezca la URL pública. No subas el archivo ZIP directamente: **extrae su contenido**.
 
-## Base académica
-Diseño instruccional: *Electiva I: Herramientas Didácticas para una Generación Digital*, mayo de 2024. Elaborado por Luz Marina Chalapud Narváez.
+## Orden de navegación
+1. Presentación general del curso, propósito, metodología, créditos y dedicación.
+2. Unidad 1: presentación del tema (texto original), contenidos, actividades, foro y cuestionario de 15 preguntas.
+3. Unidad 2: presentación del tema (texto original), contenidos, actividades, foro y cuestionario de 14 preguntas.
+4. Unidad 3: presentación del tema (texto original), contenidos, actividades, foro y cuestionario de 5 preguntas.
+5. Actividades integradoras y cuaderno de laboratorio.
+6. Rúbricas y recursos bibliográficos.
+
+Cada tarjeta de unidad contiene **Explorar unidad**. Dentro de cada unidad hay botones para ir directamente al foro y a su evaluación, así como para consultar las actividades y recursos. La nota de práctica se calcula de 0 a 5, con umbral de referencia de 3,5.
+
+## Alcance técnico y protección de datos
+GitHub Pages es un sitio estático. Los aportes a los foros se **redactan, guardan localmente y exportan**, pero **no son visibles a otros estudiantes** ni se envían a un docente. Los resultados de cuestionarios y el cuaderno de laboratorio también se guardan en el navegador. No existe un sistema de usuarios, seguimiento institucional, entrega de tareas, base de datos ni certificación oficial. Para foros realmente compartidos y seguimiento docente, se requiere integrar Moodle, Classroom o un backend autenticado. No solicites números de cédula en esta versión.
+
+Las claves se transcribieron de las respuestas resaltadas en turquesa en las capturas del diseño instruccional aportadas por la docente. **Al estar las respuestas en JavaScript público, el cuestionario es de autoevaluación y no una prueba segura para certificación**. Algunos enunciados de la fuente son históricamente específicos o susceptibles de revisión jurídica: se mantienen conforme al material original, sin reinterpretar la clave.
+
+El documento fuente tiene ponderaciones de evaluación distintas en dos secciones (40/30/30 y 40/20/40); valida cuál aplica antes de comunicar notas definitivas.
